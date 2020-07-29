@@ -5,6 +5,8 @@
     <title></title>
 </head>
 <body>
+<h3 th:text="${title}"></h3>
+
 <div>
     <th:block th:each="msg : ${messages}">
         <h1 th:text="${msg}"></h1>
