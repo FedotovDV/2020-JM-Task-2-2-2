@@ -5,12 +5,30 @@
     <title></title>
 </head>
 <body>
+<div class="container">
 <h3 th:text="${title}"></h3>
+<hr>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Model</th>
+        <th>Series</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car: ${cars}">
+        <!--/*@thymesVar id="getId" type="Long"*/-->
+        <td th:text="${car.getId()}">   </td>
+        <!--/*@thymesVar id="getModel" type="String"*/-->
+        <td th:text="${car.getModel()}">   </td>
+        <!--/*@thymesVar id="getSeries" type="int"*/-->
+        <td th:text="${car.getSeries()}">   </td>
 
-<div>
-    <th:block th:each="msg : ${messages}">
-        <h1 th:text="${msg}"></h1>
-    </th:block>
+    </tr>
+    </tbody>
+</table>
+
 </div>
 </body>
 </html>
